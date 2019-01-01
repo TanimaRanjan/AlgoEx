@@ -1,4 +1,7 @@
-
+/**  
+ * Word that start with a and end with b
+ * **/ 
+ 
 function abCount(str) {
   var pattern = /a...b/;
   ///both these work 
@@ -6,3 +9,5 @@ function abCount(str) {
   console.log(str.search(pattern));
 }
 
+abCount("abfrdcvba")
+abCount('acccb');
