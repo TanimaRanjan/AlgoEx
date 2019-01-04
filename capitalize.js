@@ -23,3 +23,5 @@ function capitalize(str) {
 capitalize('hi there, how is it going ? ')
 
 capitalize('my name is tanima ranjan ')
+
+capitalize('test test this program')
