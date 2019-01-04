@@ -71,3 +71,6 @@ node2.insert(-5)
 node2.insert(3)
 
 console.log(node2.left.left.right.data)
+
+console.log(node.contains(9999))
+
