@@ -58,3 +58,16 @@ console.log(node.left.data)
 console.log(node.right.data)
 console.log(node.right.right.data)
 console.log(node.data)
+
+console.log("Another Test ")
+
+node2 = new Node(10)
+console.log(node2.data)
+node2.insert(5)
+node2.insert(15)
+node2.insert(20)
+node2.insert(0)
+node2.insert(-5)
+node2.insert(3)
+
+console.log(node2.left.left.right.data)
