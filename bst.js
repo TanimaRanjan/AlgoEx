@@ -46,3 +46,15 @@ class Node {
 }
 
 module.exports = Node;
+
+
+/// Test --- 
+const node = new Node(10)
+node.insert(5)
+node.insert(15)
+node.insert(17)
+
+console.log(node.left.data)
+console.log(node.right.data)
+console.log(node.right.right.data)
+console.log(node.data)
