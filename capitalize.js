@@ -25,3 +25,13 @@ capitalize('hi there, how is it going ? ')
 capitalize('my name is tanima ranjan ')
 
 capitalize('test test this program')
+
+
+//   capitalize.js
+//   circular.js
+//   fromLast.js
+//   levelwidth.js
+//   pyramid.js
+//   tree.js
+//   weave.js
+ 
