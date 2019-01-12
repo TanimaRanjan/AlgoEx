@@ -1,3 +1,4 @@
+/* Prime Factor */ 
 
 function primeFactor(n) {
     var factor = [];
@@ -15,3 +16,5 @@ function primeFactor(n) {
 
     console.log(factor);
 }
+
+primeFactor(69);
