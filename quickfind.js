@@ -11,6 +11,7 @@ function quickFind(n, arrayUnion, arrayConnected) {
         id[i] = i
     }
    
+    /* Union */ 
     for(i=0;i<arrayUnion.length;i++) {
         console.log(arrayUnion[i][0], arrayUnion[i][1])
         p = arrayUnion[i][0]
@@ -28,8 +29,11 @@ function quickFind(n, arrayUnion, arrayConnected) {
     for(i=0;i<n;i++) {
         console.log(i + " " + id[i] )
     }
+    /* checking if the 2 numbers are connected */ 
+    for (i=0;i<arrayConnected.length;i++) {
+        console.log(connected(arrayConnected[i][0], arrayConnected[i][1]))
+    }
     
-    console.log(connected(arrayConnected[0], arrayConnected[1]))
 }
 
 
@@ -42,22 +46,4 @@ function connected(p,q) {
     }
 }
 
-quickFind(10, [[4,3],
-    [3,8],
-    [5,6], 
-    [9,4],
-    [2,1]
-   ], 
-   [3,9])
-
-/* 
-Input 
-N = 10
-[[4,3],
- [3,8],
- [6,5], 
- [9,4],
- [2,1]
-], 
-[3,9]
-*/
+quickFind(10, [[4,3], [3,8], [5,6],  [9,4], [2,1],  [5,0],  [7,2],  [6,1] ],  [[5,0], [3,2], [3,9]])
