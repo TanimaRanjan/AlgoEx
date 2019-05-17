@@ -142,12 +142,16 @@ var ll = new LinkedList()
 
 console.log("Is List Empty " + ll.isEmpty())
 
+// Add Item
 ll.add(10)
 
+// Print Linked List
 ll.printList()
 
+// Size of the linked list
 console.log("Size of Linked List " + ll.size_of_list())
 
+// Add more elements
 ll.add(20)
 ll.add(30)
 ll.add(40)
