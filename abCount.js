@@ -8,7 +8,6 @@ function abCount(str) {
   console.log(str)
   console.log(str.match(pattern));
 
-
   console.log(str.search(pattern));
 }
 
