@@ -14,6 +14,7 @@ function mergeSort(array) {
 
 }
 
+
 function merge(array1, array2) {
   var result = []
   var minEle = 0
@@ -37,3 +38,4 @@ function merge(array1, array2) {
 }
 
 mergeSort([6000,34,203,3,746,200,984,198,764,1,9,1]);
+
