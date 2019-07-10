@@ -30,9 +30,9 @@ function weightedQuickUnionUF(n, arrayUnion, arrayConnected) {
 function union(p, q) {
     i = root(p)
     j = root(q)
-    //console.log("root "+ p + " -  " + i +  " " + q + " -  " + j  )
+    console.log("root "+ p + " -  " + i +  " " + q + " -  " + j  )
 
-    //console.log("size "+ p + " -  " + sz[p] +  " " + q + " -  " + sz[q] )
+    console.log("size "+ p + " -  " + sz[p] +  " " + q + " -  " + sz[q] )
 
     if (i === j) return ; 
     if (sz[i] < sz[j]) {
@@ -42,9 +42,9 @@ function union(p, q) {
         id[j] = i
         sz[i] += sz[j]
     }
-    //console.log("root "+ p + " -  " + id[i] +  " " + q + " -  " + id[j]  )
+    console.log("root "+ p + " -  " + id[i] +  " " + q + " -  " + id[j]  )
 
-    //console.log("size "+ p + " -  " + sz[p] +  " " + q + " -  " + sz[q] )
+    console.log("size "+ p + " -  " + sz[p] +  " " + q + " -  " + sz[q] )
 
 }
 
