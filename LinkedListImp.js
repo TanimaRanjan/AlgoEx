@@ -218,7 +218,6 @@ class LinkedList {
 }
 
 
-
 let ll = new LinkedList();
 
 ll.insertFirst(10);
@@ -230,6 +229,7 @@ ll.insertFirst(60);
 ll.insertFirst(70);
 ll.insertFirst(80);
 ll.insertFirst(90);
+// ll.insertFirst(100);
 
 // console.log(ll.getFirst())
 // console.log(ll);
@@ -243,23 +243,35 @@ ll.insertFirst(90);
 // console.log(ll.removeLast());
 // console.logx(ll.printList());
 
-console.log(ll.getAt(5));
-
-console.log(ll.printList());
-
-console.log(ll.removeAt(0));
-
-console.log(ll.printList());
-
-ll.insertAt('Hi', 0);
-
-console.log(ll.printList());
-
+// console.log(ll.getAt(5));
+// console.log(ll.printList());
+// console.log(ll.removeAt(0));
+// console.log(ll.printList());
+// ll.insertAt('Hi', 0);
+// console.log(ll.printList());
 // console.log(ll.getAt(5));
 
-
-ll.forEach((node) => {
-    node.data += 10;
-});
+// ll.forEach((node) => {
+//     node.data += 10;
+// });
 
 console.log(ll.printList());
+
+
+const findMidPoint = (ll) => {
+
+    let slow = ll.head;
+    let fast = ll.head;
+
+
+    while(fast.next && fast.next.next) {
+        slow = slow.next; 
+        fast = fast.next.next;
+    }
+
+    return slow.item;
+
+}
+
+//findMidPoint(ll); 
+console.log(findMidPoint(ll));
