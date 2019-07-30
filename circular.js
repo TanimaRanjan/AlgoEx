@@ -5,7 +5,6 @@
 class LinkedList {
     constructor() {
         this.head = null
-        this.size = 0
     }
     addItem(item) {
         var current 
@@ -15,8 +14,8 @@ class LinkedList {
 
         } else {
             current = this.head
-            //while(current.next) {
-            for(var i=0;i<this.size-1;i++) {
+            while(current.next) {
+            // for(var i=0;i<this.size-1;i++) {
                 current = current.next
             }
             current.next = node
@@ -28,19 +27,19 @@ class LinkedList {
         this.size++
     }
     
-    printList() {
-        var current = this.head
-        var str = ""
+    // printList() {
+    //     var current = this.head
+    //     var str = ""
 
-        for(var i=0;i<this.size;i++) {
-            str += current.item + " => "
-          //  console.log(current.item)
-            current = current.next
-            //console.log(current.item)
-        } 
+    //     for(var i=0;i<this.size;i++) {
+    //         str += current.item + " => "
+    //       //  console.log(current.item)
+    //         current = current.next
+    //         //console.log(current.item)
+    //     } 
 
-        return str
-    }
+    //     return str
+    // }
 
 }
 
@@ -52,33 +51,61 @@ class Node {
 }
 
 
-function circular(link) {
+// function circular(link) {
 
-   // console.log(link)
-    var head = link.head
-    var curr , prev
-    var size = link.size
-    curr = head
-    for(var i =0;i<size;i++) {
-       // console.log(curr.item)
-        curr = curr.next
-    }
-    if(curr === head) { 
-        console.log("circular")
-    } else {
-        console.log("not circular")
+//    // console.log(link)
+//     var head = link.head
+//     var curr , prev
+//     var size = link.size
+//     curr = head
+//     for(var i =0;i<size;i++) {
+//        // console.log(curr.item)
+//         curr = curr.next
+//     }
+//     if(curr === head) { 
+//         console.log("circular")
+//     } else {
+//         console.log("not circular")
+//     }
+
+
+// }
+
+
+const circular = (ll) => {
+    let slow = ll.head;
+    let fast = ll.head;
+
+    
+    while(fast.next && fast.next.next) {
+        slow=slow.next;
+        fast = fast.next.next;
+        if(slow===fast) {
+            return "circular";
+        }
     }
 
+    return "non circular";
+     
 
 }
 
-var ll = new LinkedList()
+var ll = new LinkedList();
+const a = new Node("a");
+const b = new Node("b");
+const c = new Node("c");
+ll.head=a;
+a.next=b;
+b.next=c;
+c.next=b;
+console.log(circular(ll));
 
-ll.addItem('a')
-ll.addItem('b')
-ll.addItem('c')
-ll.addItem('d')
-console.log(ll.printList())
 
-circular(ll)
+// ll.addItem('a')
+// ll.addItem('b')
+// ll.addItem('c')
+// ll.addItem('d')
+// console.log(ll.printList())
+
+// circular(ll)
 
