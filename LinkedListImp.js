@@ -116,7 +116,7 @@ class LinkedList {
             last.next = new Node(item);
         } else
         {
-            this.head = new Node(data); 
+            this.head = new Node(item); 
         }  
 
     }
@@ -273,3 +273,39 @@ const findMidPoint = (ll) => {
 //findMidPoint(ll); 
 console.log(findMidPoint(ll));
 
+
+
+/* 
+Give a linked list and integer n. return the element n spaces from the last node. 
+Do not call the size function. 
+Assume n is less than length of the list. 
+*/ 
+
+const fromLast = (list, n) => {
+    let slow= list.head;
+    let fast=list.head;
+
+    for(let i=0;i<n;i++) {
+        fast = fast.next;
+    }
+
+    console.log(`slow ${slow.item} fast ${fast.item}`);
+    while(fast.next) {
+        slow=slow.next;
+        fast=fast.next;
+        console.log(`slow ${slow.item} fast ${fast.item}`);
+    }
+    console.log(`End slow ${slow.item} fast ${fast.item}`);
+
+    return slow.item;
+}
+
+const ll1 = new LinkedList();
+ll1.insertLast('a');
+ll1.insertLast('b');
+ll1.insertLast('c');
+ll1.insertLast('d');
+// ll1.insertLast('e');
+// ll1.insertLast('f');
+// ll1.insertLast('g');
+console.log(fromLast(ll1,2)); // b
