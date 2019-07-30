@@ -259,19 +259,17 @@ console.log(ll.printList());
 
 
 const findMidPoint = (ll) => {
-
     let slow = ll.head;
     let fast = ll.head;
-
-
     while(fast.next && fast.next.next) {
         slow = slow.next; 
         fast = fast.next.next;
     }
-
     return slow.item;
 
 }
 
+
 //findMidPoint(ll); 
 console.log(findMidPoint(ll));
+
