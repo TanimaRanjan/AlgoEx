@@ -123,6 +123,14 @@ class LinkedList {
     }
 
     size_of_list() {
+        
+        let current = this.head;
+        let size = 0;
+        while(current) {
+            size ++;
+            current = current.next;
+        }
+
         return this.size
     }
 
