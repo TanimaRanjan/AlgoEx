@@ -25,3 +25,17 @@ function fibonacci3(n) {
     }
 
 }
+
+
+
+function fibonacci255() {
+    let fibo = [0, 1];
+    let i = fibo.length
+    while(fibo[i-2] + fibo[i-1]<255) {
+        fibo[i] = fibo[i - 1] + fibo[i - 2];
+        i++;
+    }
+    console.log(fibo);
+}
+
+fibonacci255()
