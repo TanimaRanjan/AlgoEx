@@ -1,7 +1,10 @@
-  function anagrams(stringA, stringB) {
+  function anagrams2(stringA, stringB) {
     const aCharMap = buildCharMap(stringA);
     const bCharMap = buildCharMap(stringB);
   
+    console.log(aCharMap)
+    console.log(bCharMap)
+    
     if (Object.keys(aCharMap).length !== Object.keys(bCharMap).length) {
       return false;
     }
@@ -25,3 +28,9 @@
     return charMap;
   }
   
+
+  console.log(anagrams2('rail safety', 'fairy tales'));
+
+  console.log(anagrams2('RAIL! SAFETY!', 'fairy tales'))
+
+  console.log(anagrams2('Hi there', 'Bye there'))
