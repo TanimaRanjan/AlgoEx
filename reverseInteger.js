@@ -1,16 +1,20 @@
-function rev(n) {
+function rev(num) {
 	let rev = 0
-	let num = Math.abs(n)
-	while(num>0){
-        rev = (rev*10) + (num%10) 
-		num = Math.floor(num/10)
-		
+	//let num = Math.abs(n)
+	let i=0
+	while(num!==0 && i < 10){
+		i++
+		rev = (rev*10) + (num%10) 
+		num = num < 0 ? Math.ceil(num/10) : Math.floor(num/10)
+	
     }
     console.log(rev)
 	return rev
 }
 
-rev(215)
+rev(1534236469)
+9646324351
+1534236469
 /*
 
 Test.assertEquals(rev(215), "512")
