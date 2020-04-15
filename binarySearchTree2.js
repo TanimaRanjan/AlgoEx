@@ -101,10 +101,10 @@ bst_1.insert(105)
 bst_1.insert(10)
 
 // console.log(bst_1.right.right.left.left)
-
+console.log('DFS')
 // console.log(bst_1.contains(15))
-// bst_1.depthFirstTraversal(log, 'post-order')
+ bst_1.depthFirstTraversal(log, 'post-order')
 // bst_1.breadthFirstTraversal(log)
 
-console.log(`MIN: ${bst_1.getMinValue()}`)
-console.log(`MAX: ${bst_1.getMaxValue()}`)
+//console.log(`MIN: ${bst_1.getMinValue()}`)
+//console.log(`MAX: ${bst_1.getMaxValue()}`)
