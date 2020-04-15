@@ -7,7 +7,8 @@ const ABCProblem = (word) => {
    let letters = [...word.toUpperCase()];
    let length = letters.length;
    let copy = new Set(blocks);
-
+    console.log(blocks)
+    console.log(copy)
 
     for(let letter of letters) {
         for(let block of copy) {
@@ -19,12 +20,12 @@ const ABCProblem = (word) => {
             }
         }
     }
-    console.log(word, !length)
+    //console.log(word, !length)
     return !length
 }
 
 
 ABCProblem("BARK")
-ABCProblem("BOOK")
-ABCProblem("TREAT")
+//ABCProblem("BOOK")
+//ABCProblem("TREAT")
 
