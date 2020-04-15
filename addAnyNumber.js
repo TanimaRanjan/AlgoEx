@@ -1,7 +1,11 @@
 const add = (...array) => {
     let sum = 0 
     array.forEach((number) => sum +=  number )
-     return sum
+  
+
+    let sum2 = array.reduce((a,b) =>  a + b)
+    console.log(sum, sum2)
+  return sum2
 }
 
 
